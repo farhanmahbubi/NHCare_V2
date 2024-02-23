@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -20,4 +21,9 @@ Route::get('/', function () {
 
 Route::group(['namespaace' => 'Frontend'], function(){
     Route::resource('home', HomeController::class);
+});
+
+Route::group(['namespaace' => 'Backend'], function()
+{
+    Route::resource('dashboard', DashboardController::class);
 });
