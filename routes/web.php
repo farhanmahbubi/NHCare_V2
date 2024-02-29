@@ -27,3 +27,6 @@ Route::group(['namespaace' => 'Backend'], function()
 {
     Route::resource('dashboard', DashboardController::class);
 });
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
