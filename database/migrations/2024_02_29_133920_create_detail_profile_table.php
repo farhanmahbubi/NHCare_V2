@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('detail_profile', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('addres');
+            $table->string('address');
             $table->string('nomor_tlp');
             $table->date('ttl');
             $table->string('foto');
